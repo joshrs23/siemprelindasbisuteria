@@ -1,0 +1,480 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+   @media (max-width: 767px)
+    .nav-justified > li {
+        display: table-cell;
+        width: 1%;
+    }
+   .container1{
+    width: 83%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+   }
+   a {
+    color: #000000;
+    text-decoration: none;
+}
+   .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+    color: #000000;
+    background-color: #e7e7e7;
+}
+   .navbar-default {
+    background-color: #ffffff;
+    border-color: #000000;
+}
+.oculto{
+    display:none;
+}
+.row1{
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+#logo
+{   
+    background-image: url("../img/logo.gif");
+    display: block;
+    height: 112px;
+    text-indent: -10000px;
+    width: 283px;
+}
+#logoFb
+{   background-repeat: no-repeat;
+    background-image: url("../img/facebook.png");
+    display: block;
+}
+#logoInst
+{   background-repeat: no-repeat;
+    background-image: url("../img/instagram.png");
+    display: block;
+}
+#logoWtsapp
+{   background-repeat: no-repeat;
+    background-image: url("../img/whatsapp.png");
+    display: block;
+}
+#logoCall
+{   background-repeat: no-repeat;
+    background-image: url("../img/call.png");
+    display: block;
+}
+.li1{
+  margin-right: 1px;
+}
+#ul1{
+    margin-top: 3%;
+}
+
+.adaptar
+{
+    width: 100%;
+
+    background-size: contain;
+
+}
+#hr1{
+background-color: gray;
+width: 35%;
+margin-top: 15%; 
+}
+#hr2{
+background-color: #ffffff;
+width: 35%;
+margin-top: 15%; 
+}
+.p1{
+    background-color: #f8f8f8;
+    
+}
+.p2{
+    background-color: #f8f8f8;
+
+}
+.parrafo1{
+    padding-right: 14%;
+font-size: 17px;
+padding-top: 4%;
+margin-bottom: 11.3%;
+}
+.parrafo2{
+    padding-right: 14%;
+font-size: 17px;
+padding-top: 4%;
+margin-bottom: 16.8%;
+}
+#caption{
+    padding-bottom: 14%;
+}
+#ul2{
+text-decoration: none;
+    list-style: none;
+    /*float: right;/////////////////////////////////////////aqui/////////////////*/
+}
+#ul2 li{
+    display:inline;
+    text-decoration: none;
+}
+#ul3{
+text-decoration: none;
+    list-style: none;
+    
+}
+#ul3 li{
+    display:inline;
+    text-decoration: none;
+}
+#ul4{
+    padding-left: 0%;
+    padding-top: 5%;
+margin-bottom: 1%;
+}
+#copy{
+    padding-bottom: 5%;
+}
+#ul4 li{
+    display:inline;
+   padding-right: 1%;
+}
+#ul4 li a{
+    text-decoration: none
+}
+#h1Barnner{
+    float:left;
+}
+
+.btn-lg, .btn-group-lg > .btn{
+        padding: 1% 2%;
+}
+.marcoFoto{
+  border: silver 10px solid;
+  border-image-source: url("../img/catalogo/fo_marco_dorado_200.png");
+  border-image-slice: 21;
+  border-image-width: auto;
+
+  padding: 10px;
+  text-align: justify;
+}
+
+@media (max-width: 1578px) {
+   #h1Barnner {
+        font-size: 25px;
+   }
+}
+@media (max-width: 1235px) {
+   #h1Barnner {
+        font-size: 17px;
+   }
+}
+@media (max-width: 1198px) {
+   #logo6 {
+        width: 101.5%;
+   }
+}
+@media (max-width: 987px) {
+   #h1Barnner {
+        font-size: 30px;
+   }
+}
+@media (max-width: 737px) {
+   #h1Barnner {
+        font-size: 25px;
+   }
+}
+@media (max-width: 600px) {
+   #h1Barnner {
+        font-size: 20px;
+   }
+}
+@media (max-width: 565px) {
+   #caption {
+        padding-bottom: 8%;
+   }
+}
+@media (max-width: 500px) {
+   #h1Barnner {
+        font-size: 16px;
+   }
+   .btn-lg, .btn-group-lg > .btn{
+        padding: 1% 0%;
+ }
+}
+@media (max-width: 480px) {
+   #h1Barnner {
+        display: none;/*////////////////////////////////////////////corregir despues el tamaño*/
+   }
+}
+
+@media (max-width: 442px) {
+   #titulo1 {
+        font-size: 21px;/*////////////////////////////////////////////corregir despues el tamaño2*/
+   }
+}
+@media (max-width: 416px) {
+ 
+    .btn-lg, .btn-group-lg > .btn{
+        font-size: 14px;
+ }
+}  
+
+@media (max-width: 384px) {
+   #titulo1 {
+        font-size: 15px;/*////////////////////////////////////////////corregir despues el tamaño2*/
+   }
+    .btn-lg, .btn-group-lg > .btn{
+        padding: 0% 0%;
+ }
+}    
+/* aquiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii*/
+@media (min-width: 768px)
+.navbar-nav.navbar-right:last-child {
+    margin-right: -15px;
+}
+/*contactooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo*/
+#datos{
+    margin-top: 11%;
+margin-bottom: 26%;
+}
+#datos2{
+    margin-top: 18.5%;%;
+margin-bottom: 26%;
+}
+.p11{
+    background-color: #f8f8f8;
+padding-bottom: 3%;
+}
+#contac{
+    padding-top: 3%;
+}
+/*galeriaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa*/
+      #galeria {         
+          padding:0 0 0 0;
+          margin:0 0 0 0;
+      }
+     #galeria  li {     
+          list-style:none;
+          margin-bottom:25px;           
+      }
+      #galeria  li img {
+          cursor: pointer;
+      }
+    #fotos{
+        padding-top: 2%;
+    }
+    /*videosssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss*/
+    .barra1{
+        padding-left: 11%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+    /*tiendaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa*/
+    .parrafo3{
+        padding-left: 40%;
+    }
+    .botonTienda{
+        margin-bottom: 3%;
+        margin-left: 28%;
+    }
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
