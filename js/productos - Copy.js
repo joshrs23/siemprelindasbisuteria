@@ -39,10 +39,9 @@ $(document).ready(function() {
                 $.post("server/buscar2.php", {tipo: tipo,posicion:posicion,cantidad:cantidad}, function(respuesta2) {
                     //final paginacion
                     //inicio catalogo
-                        
+                    
                       prueba2 = JSON.parse(respuesta2);
                       var cont = 0;
-                      var contTotal = 0;
                       var validador=0;
                       var ventana_ancho = $(window).width();
                       for (var j in prueba2) {
@@ -64,8 +63,7 @@ $(document).ready(function() {
                                }
                         }
                         else
-                        {
-                         if(ventana_ancho > 784){
+                        { if(ventana_ancho > 784){
                                 if(cont==3)
                                 {
                                   output+="</div><div class='pantalla1 p1 row'>";
@@ -82,20 +80,14 @@ $(document).ready(function() {
                         }
                         output+=prueba2[j].tipo+"</h1><img src=img/catalogo/"+prueba2[j].imagen+" class='img-fluid' alt='Responsive image'><p class='parrafo3'>"+prueba2[j].descripcion+"<br>"+prueba2[j].referencia+"</p></div>";
                         cont =cont+1;
-                        contTotal=contTotal+1;
-                        if(prueba2.length==contTotal){
-                          output+="</div>"+output2;
+                        if(cont==6)
+                        {
+                          output+="</div>";
                           cont=0;
-                        }
-                        else{
-                          if(cont==6)
-                          {
-                            output+="</div>";
-                            cont=0;
-                          }
                         }
                       }
                     //final catalogo
+                    output=output+output2;
                     tabla.append(output);
                   }); 
                 

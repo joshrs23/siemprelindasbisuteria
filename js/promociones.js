@@ -1,13 +1,12 @@
 $(document).ready(function() {
 
         event.preventDefault();
-        $.post("server/buscar.php", {tipo: tipo}, function(respuesta) {
+        $.post("server/promocionBuscar.php", {tipo: tipo}, function(respuesta) {
 
                  var tabla = $("#todo").find('div');
                  var cantidad=0;
                  tabla.empty();
                  var output="";
-                 var output2="";
                  prueba = JSON.parse(respuesta);
                  //inicio paginacion
                  cantidad=prueba.length/48;
@@ -17,13 +16,13 @@ $(document).ready(function() {
                   output= output+"<li class='page-item disabled'><a class='page-link' href='#' tabindex='-1'>Previous</a></li>";
                  }
                  else{
-                  output= output+"<li class='page-item'><a class='page-link' href='productos.php?tipo="+tipo+"&posicion="+(parseInt(posicion)-1)+"' tabindex='productos.php?tipo="+tipo+"&posicion="+(parseInt(posicion)-1)+"'>Previous</a></li>";//mod
+                  output= output+"<li class='page-item'><a class='page-link' href='promociones.php?tipo="+tipo+"&posicion="+(parseInt(posicion)-1)+"' tabindex='promociones.php?tipo="+tipo+"&posicion="+(parseInt(posicion)-1)+"'>Previous</a></li>";//mod
                  }
 
                  var i;
 
                  for(i = 0; i < cantidad; i++){
-                    output= output+"<li class='page-item'><a class='page-link' href='productos.php?tipo="+tipo+"&posicion="+(i+1)+"'>"+(i+1)+"</a></li>";
+                    output= output+"<li class='page-item'><a class='page-link' href='promociones.php?tipo="+tipo+"&posicion="+(i+1)+"'>"+(i+1)+"</a></li>";
                  }
 
                  if(posicion==Math.floor(cantidad+1)){
@@ -31,18 +30,16 @@ $(document).ready(function() {
                  }
                  else
                  {
-                   output= output+"<li class='page-item '><a class='page-link' href='productos.php?tipo="+tipo+"&posicion="+(parseInt(posicion)+1)+"'>Next</a></li>";//mod
+                   output= output+"<li class='page-item '><a class='page-link' href='promociones.php?tipo="+tipo+"&posicion="+(parseInt(posicion)+1)+"'>Next</a></li>";//mod
                  }
                 cantidad=prueba.length;
                 output= output+"</ul></nav>";
-                output2=output;
-                $.post("server/buscar2.php", {tipo: tipo,posicion:posicion,cantidad:cantidad}, function(respuesta2) {
+                $.post("server/promocionBuscar2.php", {tipo: tipo,posicion:posicion,cantidad:cantidad}, function(respuesta2) {
                     //final paginacion
                     //inicio catalogo
                         
                       prueba2 = JSON.parse(respuesta2);
                       var cont = 0;
-                      var contTotal = 0;
                       var validador=0;
                       var ventana_ancho = $(window).width();
                       for (var j in prueba2) {
@@ -64,8 +61,7 @@ $(document).ready(function() {
                                }
                         }
                         else
-                        {
-                         if(ventana_ancho > 784){
+                        { if(ventana_ancho > 784){
                                 if(cont==3)
                                 {
                                   output+="</div><div class='pantalla1 p1 row'>";
@@ -80,19 +76,12 @@ $(document).ready(function() {
                                 output+="<div class='pantalla2 p1'><hr id='hr1'><h1>";
                               }
                         }
-                        output+=prueba2[j].tipo+"</h1><img src=img/catalogo/"+prueba2[j].imagen+" class='img-fluid' alt='Responsive image'><p class='parrafo3'>"+prueba2[j].descripcion+"<br>"+prueba2[j].referencia+"</p></div>";
+                        output+=prueba2[j].tipo+"</h1><img src=img/catalogo/"+prueba2[j].imagen+" class='img-fluid' alt='Responsive image'><p class='parrafo3'>"+prueba2[j].descripcion+"<br>"+prueba2[j].referencia+"<br>"+prueba2[j].precio+"</p></div>";
                         cont =cont+1;
-                        contTotal=contTotal+1;
-                        if(prueba2.length==contTotal){
-                          output+="</div>"+output2;
+                        if(cont==6)
+                        {
+                          output+="</div>";
                           cont=0;
-                        }
-                        else{
-                          if(cont==6)
-                          {
-                            output+="</div>";
-                            cont=0;
-                          }
                         }
                       }
                     //final catalogo
